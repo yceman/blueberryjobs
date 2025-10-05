@@ -17,3 +17,14 @@ my_ats/
 │   └── utils/          # Módulos utilitários
 └── tests/            # Arquivos de teste
 ```
+Create new project
+
+```
+cargo new my_project
+cargo new blueberryjobs
+```
+or
+
+```
+cargo new blueberryjobs
+```

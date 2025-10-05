@@ -1,25 +1,15 @@
 use actix_web::{web, App, HttpResponse, HttpServer, Responder};
 //use blueberryjobs::controllers::candidate_controller;
 //
-//
-async fn health_check() -> impl Responder {
-    HttpResponse::Ok().body("Serviço ATS rodando!")
-}
-
-async fn server_ok() -> impl Responder {
-    HttpResponse::Ok().body("Server OK")
-}
-
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     println!("Iniciando servidor...");
     HttpServer::new(|| {
         App::new()
             .route("/health", web::get().to(health_check))
-            .route("/", web::get().to(server_ok))
             //.configure(candidate_controller::configure_routes)
     })
     .bind("127.0.0.1:8080")?
     .run()
-    .await
+    await
 }
